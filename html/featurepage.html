@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Form</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            form {
+                margin: 0;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>Students Grade prediction application</h1>
+
+    <form action="/submit" method="post">
+        <!-- School -->
+        <label for="school">School:</label>
+        <!-- <input type="text" id="school" name="school" required><br> -->
+        <select id="school" name="school" required>
+            <option value="GP">GP</option>
+            <option value="MP">MP</option>
+        </select><br>
+
+        <!-- Sex -->
+        <label for="sex">Sex:</label>
+        <select id="sex" name="sex" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br>
+
+        <!-- Age -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <!-- Address -->
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br>
+
+        <!-- Famsize -->
+        <label for="famsize">Family Size:</label>
+        <select id="famsize" name="famsize" required>
+            <option value="GT3">Greater than 3</option>
+            <option value="LT3">Less than 3</option>
+        </select><br>
+
+
+        <!-- Pstatus -->
+        <label for="pstatus">Parent's Status:</label>
+        <select id="pstatus" name="pstatus" required>
+            <option value="T">Together</option>
+            <option value="A">Apart</option>
+        </select><br>
+
+        <!-- Medu -->
+        <label for="medu">Mother's Education:</label>
+        <input type="number" id="medu" name="medu" required><br>
+
+        <!-- Fedu -->
+        <label for="fedu">Father's Education:</label>
+        <input type="number" id="fedu" name="fedu" required><br>
+
+        <!-- Mjob -->
+        <label for="mjob">Mother's Job:</label>
+        <input type="text" id="mjob" name="mjob" required><br>
+
+        <!-- Fjob -->
+        <label for="fjob">Father's Job:</label>
+        <input type="text" id="fjob" name="fjob" required><br>
+
+        <!-- Reason -->
+        <label for="reason">Reason for Choosing School:</label>
+        <input type="text" id="reason" name="reason" required><br>
+
+        <!-- Guardian -->
+        <label for="guardian">Guardian:</label>
+        <input type="text" id="guardian" name="guardian" required><br>
+
+        <!-- Traveltime -->
+        <label for="traveltime">Travel Time:</label>
+        <input type="number" id="traveltime" name="traveltime" required><br>
+
+        <!-- Studytime -->
+        <label for="studytime">Study Time:</label>
+        <input type="number" id="studytime" name="studytime" required><br>
+
+        <!-- Failures -->
+        <label for="failures">Number of Failures:</label>
+        <input type="number" id="failures" name="failures" required><br>
+
+        <!-- Schoolsup -->
+        <label for="schoolsup">School Support:</label>
+        <select id="schoolsup" name="schoolsup" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+
+        <!-- Famsup -->
+        <label for="famsup">Family Support:</label>
+        <select id="famsup" name="famsup" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+
+        <!-- Paid -->
+        <label for="paid">Paid Classes:</label>
+        <select id="paid" name="paid" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+
+        <!-- Activities -->
+        <label for="activities">Extracurricular Activities:</label>
+        <select id="activities" name="activities" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+
+        <!-- Nursery -->
+        <label for="nursery">Nursery:</label>
+        <select id="nursery" name="nursery" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+
+        <!-- Higher -->
+        <label for="higher">Wants to Pursue Higher Education:</label>
+        <select id="higher" name="higher" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+
+        <!-- Internet -->
+        <label for="internet">Internet Access:</label>
+        <select id="internet" name="internet" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+
+        <!-- Romantic -->
+        <label for="romantic">In a Romantic Relationship:</label>
+        <select id="romantic" name="romantic" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+
+        <!-- Famrel -->
+        <label for="famrel">Family Relationship:</label>
+        <input type="number" id="famrel" name="famrel" required><br>
+
+        <!-- Freetime -->
+        <label for="freetime">Free Time:</label>
+        <input type="number" id="freetime" name="freetime" required><br>
+
+        <!-- Goout -->
+        <label for="goout">Going Out:</label>
+        <input type="number" id="goout" name="goout" required><br>
+
+        <!-- Dalc -->
+        <label for="dalc">Weekday Alcohol Consumption:</label>
+        <input type="number" id="dalc" name="dalc" required><br>
+
+        <!-- Walc -->
+        <label for="walc">Weekend Alcohol Consumption:</label>
+        <input type="number" id="walc" name="walc" required><br>
+
+        <!-- Health -->
+        <label for="health">Health Status:</label>
+        <input type="number" id="health" name="health" required><br>
+
+        <!-- Absences -->
+        <label for="absences">Number of Absences:</label>
+        <input type="number" id="absences" name="absences" required><br>
+
+        <!-- Submit button -->
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
